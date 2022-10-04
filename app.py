@@ -92,9 +92,12 @@ with tab2:
    left = y=alt.Y('Age:O', axis=None),
    x=alt.X('sum(data):Q',
             title='population',
-            sort=alt.SortOrder('descending')),
+            sort=alt.SortOrder('descending'))
    
-
+   middle = base.encode(
+    y=alt.Y('Department:O', axis=None),
+    text=alt.Text('Department:Q'),
+   ).mark_text().properties(width=20)
    
    
 
