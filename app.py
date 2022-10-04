@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import altair as alt
-from sklearn.metrics import mean_squared_error
+
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
 import itertools
