@@ -55,4 +55,4 @@ st.title('Hello World!')
 st.write(limited_float_ret, limited_float_per, limited_float_age)
 ret_met = st.metric(label="Retention rate", value= limited_float_ret)
 
-st.write(ret_met + "%")
+st.write(ret_met + (str("%")))
