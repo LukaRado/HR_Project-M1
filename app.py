@@ -42,7 +42,7 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 at_0 = data.loc[(data['Attrition'] == 'No')]
 ret_rate = (at_0['Attrition'].count() / 4300) * 100
 limited_float_ret = round(ret_rate, 1)
-final_ret = limited_float_ret +"%"
+final_ret = str.limited_float_ret +"%"
 
 o_per = data['PerformanceRating'].mean()
 limited_float_per = round(o_per, 1)
