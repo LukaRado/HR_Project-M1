@@ -50,7 +50,7 @@ m_age = data['Age'].mean()
 limited_float_age = round(m_age, 1)
 
 #Streamlit interface:
-st.title('Hello World!')
+st.title('HR Managers Informational Sheet')
 
 ret_met, ret_per, ret_age = st.columns(3)
 ret_met.metric(label = "Retention rate", value = limited_float_ret)
