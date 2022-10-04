@@ -83,7 +83,7 @@ with tab2:
    source = data
 
    base = alt.Chart(source).transform_calculate(
-    gender=alt.expr.if_(alt.data.gender == 1, 'Male', 'Female')
+    gender=alt.expr.if_(alt.data.Gender == 1, 'Male', 'Female')
    ).properties(
     width=250
    )
