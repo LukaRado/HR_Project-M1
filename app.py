@@ -60,7 +60,7 @@ with colT2:
    st.title('HR Managing Tool Project')
 
 
-   tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
+tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
 
 with tab1:
    st.header("Overview")
