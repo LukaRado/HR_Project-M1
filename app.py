@@ -96,8 +96,7 @@ with tab2:
    text=alt.Text('Age:Q'),
    
 
-   right = 
-   y=alt.Y('ret_rate:O', axis=None),
+   right = y=alt.Y('ret_rate:O', axis=None),
    x=alt.X('sum(people):Q', title='Retention Rate'),
    color=alt.Color('gender:N', scale=color_scale, legend=None)
    
