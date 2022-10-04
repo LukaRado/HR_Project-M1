@@ -39,4 +39,4 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 
 #Streamlit interface:
-st.Title('Hello World!')
+st.title['Hello World!']
