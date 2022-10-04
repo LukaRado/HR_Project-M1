@@ -40,7 +40,7 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 #Primary KPI calculations (Retention rate, Overall performance, mean age)
 at_0 = data.loc[(data['Attrition'] == 'No')]
-ret_rate = (at_0['Attrition'].count() / 4300) * 100 + '%'
+ret_rate = (at_0['Attrition'].count() / 4300) * 100
 limited_float_ret = round(ret_rate, 1)
 
 o_per = data['PerformanceRating'].mean()
@@ -53,4 +53,4 @@ limited_float_age = round(m_age, 1)
 st.title('Hello World!')
 
 st.write(limited_float_ret, limited_float_per, limited_float_age)
-st.metric(label="Retention rate", value= limited_float_ret)
+st.metric(label="Retention rate", value= limited_float_ret +"%")
