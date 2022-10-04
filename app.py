@@ -12,7 +12,7 @@ data3 = pd.read_csv('manager_survey_data.csv')
 data1.info()
 data2.info()
 data3.info()
-Merging the Data
+
 
 #merging the data
 data = data3.merge(data2, on="EmployeeID", how="right").merge(data1, on="EmployeeID", how="right") 
