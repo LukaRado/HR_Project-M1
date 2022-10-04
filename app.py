@@ -51,6 +51,10 @@ m_age = data['Age'].mean()
 limited_float_age = round(m_age, 1)
 
 ##Streamlit interface:
+st.set_page_config(page_title='HR Managing Tool',
+                    page_icon="👨🏻‍💻",
+                    layout='wide')
+
 st.title('HR Project')
 tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
 
