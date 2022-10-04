@@ -42,7 +42,7 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 at_0 = data.loc[(data['Attrition'] == 'No')]
 ret_rate = (at_0['Attrition'].count() / 4300) * 100
 limited_float_ret = round(ret_rate, 1)
-
+final_ret = limited_float_ret +"%"
 
 o_per = data['PerformanceRating'].mean()
 limited_float_per = round(o_per, 1)
@@ -54,7 +54,7 @@ limited_float_age = round(m_age, 1)
 st.title('HR Managers Informational Sheet')
 
 ret_met, ret_per, ret_age = st.columns(3)
-ret_met.metric(label = "Retention rate", value = limited_float_ret)
+ret_met.metric(label = "Retention rate", value = final_ret)
 ret_per.metric(label = "Overall Performance", value = limited_float_per)
 ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
