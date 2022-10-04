@@ -90,7 +90,7 @@ with tab2:
             title='Retention rate',
             sort=alt.SortOrder('descending')),
    color=alt.Color('gender:N', scale=color_scale, legend=None)
-   .mark_bar().properties(title='Female')
+   
 
    middle = base.encode(
     y=alt.Y('Department', axis=None),
