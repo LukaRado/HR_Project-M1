@@ -52,7 +52,6 @@ limited_float_age = round(m_age, 1)
 #Streamlit interface:
 st.title('Hello World!')
 
-st.write(limited_float_ret, limited_float_per, limited_float_age)
 ret_met, ret_per, ret_age = st.columns(3)
 ret_met = st.metric(label = "Retention rate", value = limited_float_ret)
 ret_per = st.metric(label = "Overall Performance", value = limited_float_per)
