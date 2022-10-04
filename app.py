@@ -62,12 +62,12 @@ with tab1:
 with tab2:
    st.header("HR Managers Informational Sheet")   
 
-ret_met, ret_per, ret_age = st.columns(3)
-ret_met.metric(label = "Retention rate (%)", value = limited_float_ret)
-ret_per.metric(label = "Overall Performance (Scale 1-4)", value = limited_float_per)
-ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
+   ret_met, ret_per, ret_age = st.columns(3)
+   ret_met.metric(label = "Retention rate (%)", value = limited_float_ret)
+   ret_per.metric(label = "Overall Performance (Scale 1-4)", value = limited_float_per)
+   ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
-#first plot
+   #first plot
 
 
 with tab3:
