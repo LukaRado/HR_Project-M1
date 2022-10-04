@@ -1,5 +1,5 @@
 #Import libraries
-pip install streamlit as st -U -Q
+%pip Install streamlit as st -U -q
 
 import streamlit as st
 import pandas as pd
