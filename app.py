@@ -38,16 +38,18 @@ data['NumCompaniesWorked'] = data['NumCompaniesWorked'].astype(int)
 data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 
+#Primary KPI calculations (Retention rate, Overall performance, mean age)
+at_0 = data.loc[(data['Attrition'] == 'No')]
+ret_rate = (at_0['Attrition'].count() / 4300) * 100
+limited_float_ret = round(ret_rate, 1)
+
+o_per = data['PerformanceRating'].mean()
+limited_float_per = round(o_per, 1)
+
+m_age = data['Age'].mean()
+limited_float_age = round(m_age, 1)
 
 #Streamlit interface:
 st.title('Hello World!')
 
-#Primary KPI calculations (Retention rate, Overall performance, mean age)
-at_0 = data.loc[(data['Attrition'] == 'No')]
-ret_rate = (at_0['Attrition'].count() / 4300) * 100
-
-o_per = data['PerformanceRating'].mean()
-
-m_age = data['Age'].mean()
-
-st.write(ret_rate, o_per, m_age)
+st.write(limited_float_ret, limited_float_per, limited_float_age)
