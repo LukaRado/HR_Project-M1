@@ -82,11 +82,7 @@ with tab2:
    #first plot
    source = data
 
-   base = alt.Chart(source).transform_calculate(
-    Gender=alt.expr.if_(alt.data.Gender == 1, 'Male', 'Female')
-   ).properties(
-    width=250
-   )
+   
 
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
