@@ -34,9 +34,10 @@ data=data[['Attrition', 'BusinessTravel', 'Department','EducationField', 'Gender
        'YearsWithCurrManager', 'EnvironmentSatisfaction', 'JobSatisfaction',
        'WorkLifeBalance', 'JobInvolvement', 'PerformanceRating','Age']]
 data.info()
-add unique values here
+
 #Count people who left and stayed at the company
 data["Attrition"].value_counts()
+
 # State of the Art HR 
 alt.Chart(data).mark_circle(size=60).encode( #we need to add properties for streamlit #its hard to interpret
     x='MonthlyIncome',
@@ -44,11 +45,14 @@ alt.Chart(data).mark_circle(size=60).encode( #we need to add properties for stre
     color='JobRole',
     tooltip=['JobRole', 'MonthlyIncome', 'TotalWorkingYears']
 ).interactive()
+
 source = data #figure something out! 
+
 alt.Chart(source).mark_bar().encode(
     x='MonthlyIncome',
     y='TotalWorkingYears',
     color='JobRole')
+
 #use value count for checking the outliers 
 alt.Chart(data).mark_point().encode(
     alt.X('mean(Age):Q', scale=alt.Scale(zero=False)),
@@ -66,9 +70,8 @@ alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatis
     color='JobSatisfaction'
 ).properties(width=200)
 alt.Chart(data).mark_bar().encode(x='Age',y='sum(Age)',color='Attrition').properties(width=700).interactive()
-# Feature Engineering 
-data.info()
-NumCompaniesWork is a float --> integer
+
+
 #selected_df = data[['Attrition','JobSatisfaction','YearsAtCompany','MonthlyIncome','Age','JobLevel','PerformanceRating','TrainingTimesLastYear']]
 selected_df = data[['Attrition', 'Department','EducationField','Gender']]
 X = selected_df.iloc[:,1:] #we select the X values from selected_df
@@ -101,4 +104,4 @@ o_per = data['PerformanceRating'].mean()
 #mean age 
 
 m_age = data['Age'].mean()
-m_age
+
