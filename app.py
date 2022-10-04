@@ -41,3 +41,13 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 #Streamlit interface:
 st.title('Hello World!')
+
+#Primary KPI calculations (Retention rate, Overall performance, mean age)
+at_0 = data.loc[(data['Attrition'] == 'No')]
+ret_rate = (at_0['Attrition'].count() / 4300) * 100
+
+o_per = data['PerformanceRating'].mean()
+
+m_age = data['Age'].mean()
+
+st.print(ret_rate, o_per, m_age)
