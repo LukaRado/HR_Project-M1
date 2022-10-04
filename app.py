@@ -81,15 +81,20 @@ with tab2:
 
    #first plot
    source = data
-
+   base = alt.Chart(source).transform_calculate(
+        gender=alt.expr.if_(alt.datum.sex == 1, 'Male', 'Female')
+    ).properties(
+        width=250
+    )
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
 
-   left = y=alt.Y('ret_rate:O', axis=None),
+   left = base().enconde(
+   y=alt.Y('ret_rate:O', axis=None),
    x=alt.X('sum(people):Q',
             title='Retention rate',
             sort=alt.SortOrder('descending')),
-   color=alt.Color('gender:N', scale=color_scale, legend=None)
+   color=alt.Color('gender:N', scale=color_scale, legend=None))
    
 
    middle = y=alt.Y('Department', axis=None),
@@ -101,7 +106,7 @@ with tab2:
    color=alt.Color('gender:N', scale=color_scale, legend=None)
    
 
-   alt.concat(left, middle, right)
+   alt.concat(left, middle, right, spacing=5)
 
    
 
