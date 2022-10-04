@@ -55,7 +55,7 @@ st.set_page_config(page_title='HR Managing Tool',
                     page_icon="🛠",
                     layout='wide')
 
-colT1,colT2 = st.columns([1,12])
+colT1,colT2 = st.columns([10,20])
 with colT2:
    st.title('HR Managing Tool Project')
 
