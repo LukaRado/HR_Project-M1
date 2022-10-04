@@ -50,4 +50,4 @@ o_per = data['PerformanceRating'].mean()
 
 m_age = data['Age'].mean()
 
-st.print(ret_rate, o_per, m_age)
+st.write(ret_rate, o_per, m_age)
