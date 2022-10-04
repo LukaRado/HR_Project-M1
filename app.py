@@ -40,6 +40,7 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 #Primary KPI calculations (Retention rate, Overall performance, mean age)
 at_0 = data.loc[(data['Attrition'] == 'No')]
+at_1 = data.loc[(data['Attrition'] == 'Yes')]
 ret_rate = (at_0['Attrition'].count() / 4300) * 100
 limited_float_ret = round(ret_rate, 1)
 
