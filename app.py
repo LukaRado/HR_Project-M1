@@ -52,7 +52,7 @@ limited_float_age = round(m_age, 1)
 
 ##Streamlit interface:
 st.set_page_config(page_title='HR Managing Tool',
-                    page_icon="👨🏻‍💻",
+                    page_icon="https://discord.com/assets/2ca36a6407640df119f1cac98a4fde48.svg",
                     layout='wide')
 
 st.title('HR Project')
