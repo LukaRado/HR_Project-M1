@@ -81,7 +81,7 @@ with tab2:
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
    #first plot
-   st.subheader(alt.Chart(data).mark_boxplot(extent='min-max').encode(
+   st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
     x='Age:Q',
     y='JobRole:O'
    ))
