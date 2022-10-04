@@ -80,6 +80,19 @@ with tab2:
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
    #first plot
+   source = data
+   base = alt.Chart(source).add_selection(
+    select_year
+   ).transform_filter(
+    select_year
+   ).transform_calculate(
+    gender=alt.expr.if_(alt.datum.sex == 1, 'Male', 'Female')
+   ).properties(
+    width=250
+   )
+
+
+   
 
 
 with tab3:
