@@ -64,7 +64,11 @@ tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
 
 with tab1:
    st.header("Overview")
-   st.write("Hello motherfuckers..")
+   st.write("We have created a tool, which main purpose is for the HR department to gain an overview of the company." +
+   "\r\n" +
+   "We have done this through the use of important KPI's which we have supplimented with useful graphs and information required to gain a proper insight into the state of the company." +
+   "\r\n" +
+   "We have also used supervised machine learning to predict probability of attrition while showing specific indicators for a picked employee and unsupervised learning to help us understand clusters which might be formed within the company, as these clusters could signal action is required")
 
 
 with tab2:
