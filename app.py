@@ -101,7 +101,7 @@ with tab2:
    color=alt.Color('gender:N', scale=color_scale, legend=None)
    
 
-   alt.concat(left, middle, right, spacing=5)
+   alt.concat(left, middle, right)
 
    
 
