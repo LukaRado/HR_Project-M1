@@ -89,24 +89,10 @@ with tab2:
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
 
-   left = base.enconde(
-   y=alt.Y('ret_rate:O', axis=None),
-   x=alt.X('sum(people):Q',
-            title='Retention rate',
-            sort=alt.SortOrder('descending')),
-   color=alt.Color('gender:N', scale=color_scale, legend=None))
+   
    
 
-   middle = y=alt.Y('Department', axis=None),
-   text=alt.Text('Age:Q'),
-   
-
-   right = y=alt.Y('ret_rate:O', axis=None),
-   x=alt.X('sum(people):Q', title='Retention Rate'),
-   color=alt.Color('gender:N', scale=color_scale, legend=None)
-   
-
-   alt.concat(left, middle, right, spacing=5)
+ 
 
    
 
