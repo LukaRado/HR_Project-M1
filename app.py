@@ -82,9 +82,9 @@ with tab2:
    #first plot
    source = data
    base = alt.Chart(source).add_selection(
-    select_year
+    ret_rate
    ).transform_filter(
-    select_year
+    ret_rate
    ).transform_calculate(
     gender=alt.expr.if_(alt.datum.sex == 1, 'Male', 'Female')
    ).properties(
