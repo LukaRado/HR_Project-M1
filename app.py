@@ -89,11 +89,11 @@ with tab2:
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
 
-   left = y=alt.Y('age:O', axis=None),
-   x=alt.X('sum(people):Q',
+   left = y=alt.Y('Age:O', axis=None),
+   x=alt.X('sum(data):Q',
             title='population',
             sort=alt.SortOrder('descending')),
-   color=alt.Color('gender:N', scale=color_scale, legend=None).mark_bar().properties(title='Female')
+   color=alt.Color('Gender:N', scale=color_scale, legend=None).mark_bar().properties(title='Female')
 
    
    
