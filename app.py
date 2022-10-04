@@ -93,7 +93,7 @@ with tab2:
    x=alt.X('sum(data):Q',
             title='population',
             sort=alt.SortOrder('descending')),
-   color=alt.Color('Gender:N', scale=color_scale, legend=None).mark_bar().properties(title='Female')
+   
 
    
    
