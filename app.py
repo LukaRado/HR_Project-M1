@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
-
+import plotly.figure_factory as ff
 
 #Importing data
 data1 = pd.read_csv('employee_survey_data.csv')
