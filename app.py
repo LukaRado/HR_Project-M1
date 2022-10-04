@@ -59,7 +59,9 @@ colT1,colT2 = st.columns([10,20])
 with colT2:
    st.title('HR Managing Tool Project')
 
-tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
+colT3,colT4 = st.columns([10,20])
+with colT4:
+   tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
 
 with tab1:
    st.header("Overview")
