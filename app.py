@@ -111,12 +111,6 @@ with tab2:
             labelPadding=0,
         ),
     )
-   ).properties(
-    width=100
-   ).configure_facet(
-    spacing=0
-   ).configure_view(
-    stroke=None
    ))
 
 
