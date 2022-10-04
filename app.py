@@ -1,5 +1,5 @@
 #Import libraries
-streamlit run app.py
+
 
 import streamlit as st
 import pandas as pd
@@ -40,4 +40,4 @@ data['TotalWorkingYears'] = data['TotalWorkingYears'].astype(int)
 
 
 #Streamlit interface:
-st.title['Hello World!']
+st.title('Hello World!')
