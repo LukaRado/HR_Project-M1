@@ -53,7 +53,7 @@ limited_float_age = round(m_age, 1)
 st.title('Hello World!')
 
 ret_met, ret_per, ret_age = st.columns(3)
-ret_met = st.metric(label = "Retention rate", value = limited_float_ret)
-ret_per = st.metric(label = "Overall Performance", value = limited_float_per)
-ret_age = st.metric(label = "Mean Workforce Age", value = limited_float_age)
+ret_met.metric(label = "Retention rate", value = limited_float_ret)
+ret_per.metric(label = "Overall Performance", value = limited_float_per)
+ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
