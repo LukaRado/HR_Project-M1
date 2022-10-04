@@ -80,30 +80,7 @@ with tab2:
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
    #first plot
-   source = data
-   base = alt.Chart(source).transform_calculate(
-        gender=alt.expr.if_(alt.datum.sex == 1, 'Male', 'Female')
-    ).properties(
-        width=250
-    )
-   color_scale = alt.Scale(domain=['Male', 'Female'],
-                        range=['#1f77b4', '#e377c2'])
-
-   left = y=alt.Y('Age:O', axis=None),
-   x=alt.X('sum(data):Q',
-            title='population',
-            sort=alt.SortOrder('descending'))
    
-   middle = base.encode(
-    y=alt.Y('Age:O', axis=None),
-    text=alt.Text('Age:Q'),
-   ).mark_text().properties(width=20)
-   
-   right = y=alt.Y('age:O', axis=None),
-   x=alt.X('sum(people):Q', title='population'),
-   color=alt.Color('gender:N', scale=color_scale, legend=None)
-   
-   alt.concat(left, middle, right)
 
    
 
