@@ -89,7 +89,7 @@ with tab2:
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
 
-   left = base(source).enconde(
+   left = base.enconde(
    y=alt.Y('ret_rate:O', axis=None),
    x=alt.X('sum(people):Q',
             title='Retention rate',
