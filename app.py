@@ -60,7 +60,7 @@ with colT2:
    st.title('HR Managing Tool Project')
 
 
-tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
+tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
 with tab1:
    st.header("Overview")
@@ -68,7 +68,7 @@ with tab1:
 
 
 with tab2:
-   st.header("HR Managers Informational Sheet")   
+   st.header("HR Managerial Informational Sheet")   
 
    ret_met, ret_per, ret_age = st.columns(3)
    ret_met.metric(label = "Retention rate (%)", value = limited_float_ret)
