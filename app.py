@@ -55,10 +55,7 @@ st.set_page_config(page_title='HR Managing Tool',
                     page_icon="🛠",
                     layout='wide')
 
-st.title('HR Project'{
-  text-align: center
-}
-</style>)
+st.title('HR Project')
 tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
 
 with tab1:
