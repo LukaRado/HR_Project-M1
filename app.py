@@ -92,16 +92,15 @@ with tab2:
    color=alt.Color('gender:N', scale=color_scale, legend=None)
    
 
-   middle = base.encode(
-    y=alt.Y('Department', axis=None),
-    text=alt.Text('Age:Q'),
-   ).mark_text().properties(width=20)
+   middle = y=alt.Y('Department', axis=None),
+   text=alt.Text('Age:Q'),
+   
 
-   right = encode(
-    y=alt.Y('ret_rate:O', axis=None),
-    x=alt.X('sum(people):Q', title='Retention Rate'),
-    color=alt.Color('gender:N', scale=color_scale, legend=None)
-   ).mark_bar().properties(title='Male')
+   right = 
+   y=alt.Y('ret_rate:O', axis=None),
+   x=alt.X('sum(people):Q', title='Retention Rate'),
+   color=alt.Color('gender:N', scale=color_scale, legend=None)
+   
 
    alt.concat(left, middle, right, spacing=5)
 
