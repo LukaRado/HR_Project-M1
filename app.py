@@ -99,6 +99,11 @@ with tab2:
     text=alt.Text('Department:Q'),
    ).mark_text().properties(width=20)
    
+   right = y=alt.Y('age:O', axis=None),
+   x=alt.X('sum(people):Q', title='population'),
+   color=alt.Color('gender:N', scale=color_scale, legend=None)
+   
+   alt.concat(left, middle, right, spacing=5)
    
 
  
