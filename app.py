@@ -51,6 +51,17 @@ m_age = data['Age'].mean()
 limited_float_age = round(m_age, 1)
 
 ##Streamlit interface:
+tab1, tab2, tab3 = st.tabs(["Overview", "HR Manager", "SML"])
+
+with tab1:
+   st.header("Overview")
+
+
+
+with tab2:
+   st.header("HR Manager")   
+
+
 st.title('HR Managers Informational Sheet')
 
 ret_met, ret_per, ret_age = st.columns(3)
@@ -59,3 +70,7 @@ ret_per.metric(label = "Overall Performance (Scale 1-4)", value = limited_float_
 ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
 #first plot
+
+
+with tab3:
+   st.header("SML")
