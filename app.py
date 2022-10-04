@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
-import plotly.figure_factory as ff
+from vega_datasets import data
 
 #Importing data
 data1 = pd.read_csv('employee_survey_data.csv')
@@ -49,7 +49,7 @@ limited_float_per = round(o_per, 1)
 m_age = data['Age'].mean()
 limited_float_age = round(m_age, 1)
 
-#Streamlit interface:
+##Streamlit interface:
 st.title('HR Managers Informational Sheet')
 
 ret_met, ret_per, ret_age = st.columns(3)
@@ -57,3 +57,4 @@ ret_met.metric(label = "Retention rate", value = limited_float_ret)
 ret_per.metric(label = "Overall Performance", value = limited_float_per)
 ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
+#first plot
