@@ -83,8 +83,8 @@ with tab2:
    #first plot
 
    st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
-    x='Age:Q',
-    y='JobRole:O'
+   x='Age:Q',
+   y='JobRole:O'
    ))
 
 
