@@ -81,38 +81,36 @@ with tab2:
 
    #first plot
    source = data
-   base = alt.Chart(source).add_selection(
-    ret_rate
-   ).transform_filter(
-    ret_rate
-   ).transform_calculate(
-    gender=alt.expr.if_(alt.datum.sex == 1, 'Male', 'Female')
+
+   base = alt.Chart(source).transform_calculate(
+    gender=alt.expr.if_(alt.data.gender == 1, 'Male', 'Female')
    ).properties(
     width=250
    )
+
    color_scale = alt.Scale(domain=['Male', 'Female'],
                         range=['#1f77b4', '#e377c2'])
 
    left = base.transform_filter(
     alt.datum.gender == 'Female'
    ).encode(
-    y=alt.Y('age:O', axis=None),
+    y=alt.Y('ret_rate:O', axis=None),
     x=alt.X('sum(people):Q',
-            title='population',
+            title='Retention rate',
             sort=alt.SortOrder('descending')),
     color=alt.Color('gender:N', scale=color_scale, legend=None)
    ).mark_bar().properties(title='Female')
 
    middle = base.encode(
-    y=alt.Y('age:O', axis=None),
-    text=alt.Text('age:Q'),
+    y=alt.Y('Department', axis=None),
+    text=alt.Text('Age:Q'),
    ).mark_text().properties(width=20)
 
    right = base.transform_filter(
     alt.datum.gender == 'Male'
    ).encode(
-    y=alt.Y('age:O', axis=None),
-    x=alt.X('sum(people):Q', title='population'),
+    y=alt.Y('ret_rate:O', axis=None),
+    x=alt.X('sum(people):Q', title='Retention Rate'),
     color=alt.Color('gender:N', scale=color_scale, legend=None)
    ).mark_bar().properties(title='Male')
 
