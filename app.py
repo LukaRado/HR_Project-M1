@@ -95,8 +95,8 @@ with tab2:
             sort=alt.SortOrder('descending'))
    
    middle = base.encode(
-    y=alt.Y('Department:O', axis=None),
-    text=alt.Text('Department:Q'),
+    y=alt.Y('Age:O', axis=None),
+    text=alt.Text('Age:Q'),
    ).mark_text().properties(width=20)
    
    right = y=alt.Y('age:O', axis=None),
@@ -104,7 +104,7 @@ with tab2:
    color=alt.Color('gender:N', scale=color_scale, legend=None)
    
    alt.concat(left)
-   
+
    
 
  
