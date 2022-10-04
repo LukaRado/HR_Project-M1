@@ -53,3 +53,4 @@ limited_float_age = round(m_age, 1)
 st.title('Hello World!')
 
 st.write(limited_float_ret, limited_float_per, limited_float_age)
+st.metric(label="Retention rate", value= limited_float_ret)
