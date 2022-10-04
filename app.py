@@ -87,34 +87,34 @@ with tab2:
    )
 
    alt.Chart(data).transform_density(
-    'Age',
-    as_=['m_age', 'at_1'],
-    extent=[5, 75],
-    groupby=['JobRole']
+   'Age',
+   as_=['m_age', 'at_1'],
+   extent=[5, 75],
+   groupby=['JobRole']
    ).mark_area(orient='horizontal').encode(
-    y='m_age:Q',
-    color='JobRole:N',
-    x=alt.X(
-        'at_1:Q',
-        stack='center',
-        impute=None,
-        title='Attrition',
-        axis=alt.Axis(labels=False, values=[0],grid=False, ticks=True),
-    ),
-    column=alt.Column(
-        'JobRole:N',
-        header=alt.Header(
-            titleOrient='bottom',
-            labelOrient='bottom',
-            labelPadding=0,
-        ),
-    )
+   y='m_age:Q',
+   color='JobRole:N',
+   x=alt.X(
+      'at_1:Q',
+      stack='center',
+      impute=None,
+      title='Attrition',
+      axis=alt.Axis(labels=False, values=[0],grid=False, ticks=True),
+   ),
+   column=alt.Column(
+      'JobRole:N',
+      header=alt.Header(
+         titleOrient='bottom',
+         labelOrient='bottom',
+         labelPadding=0,
+      ),
+   )
    ).properties(
-    width=100
+       width=100
    ).configure_facet(
-    spacing=0
+       spacing=0
    ).configure_view(
-    stroke=None
+       stroke=None
    )
    
 
