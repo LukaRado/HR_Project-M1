@@ -80,7 +80,12 @@ with tab2:
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
    #first plot
-   
+   source = data
+
+   alt.Chart(source).mark_bar().encode(
+    x = data.Department,
+    y = ret_rate
+   )
 
    
 
