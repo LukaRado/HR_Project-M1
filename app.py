@@ -109,7 +109,7 @@ with tab2:
 
        alt.X('YearsWithCurrManager:O', bin=alt.Bin(maxbins=60)),
 
-       alt.Y('sum(YearsWithCurrManager):O', bin=alt.Bin(maxbins=40)),
+       alt.Y('YearsWithCurrManager:O', bin=alt.Bin(maxbins=40)),
 
        alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
 
