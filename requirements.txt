@@ -4,4 +4,3 @@ scikit_learn
 shap
 streamlit
 xgboost
-seaborn
