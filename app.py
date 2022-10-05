@@ -148,3 +148,20 @@ with tab4:
 
       st.image(image = "KMeans 2.png")
    
+   g = sns.lmplot(x="YearsAtCompany",
+
+               y="MonthlyIncome_log",
+
+               hue="Attrition",
+
+               height=7,
+
+               data=df_hr,
+
+                scatter_kws={'alpha':0.5},
+
+               palette=palette)
+
+   g.set_xlabels('YearsAtCompany')
+
+   g.set_ylabels('MonthlyIncome')
