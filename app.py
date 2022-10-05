@@ -135,14 +135,13 @@ with tab2:
        selection
    ))
 
-
-   st.write(alt.Chart(data).mark_bar().encode(
+   mark_bar, mark_rect = st.column(2)
+   mark_bar = st.write(alt.Chart(data).mark_bar().encode(
       x='Age',
       y='sum(Age)',
       color='Attrition').properties(width=700).interactive())
-
-
-   st.write(alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatisfaction
+   
+   mark_rect = st.write(alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatisfaction
     x='JobLevel',
     y='JobRole',
     color='JobSatisfaction'
