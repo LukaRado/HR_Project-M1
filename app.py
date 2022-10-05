@@ -163,7 +163,14 @@ with tab3:
 
    NumCompaniesWorked = st.number_input('How many companies you worked at?', min_value=0, max_value=9)
 
+   if st.button('Predict! 🚀'):
+    # make a DF for categories and transform with one-hot-encoder
+    new_values_cat = pd.DataFrame(columns=['Healthcare Representative', 'Human Resources', 'Laboratory Technician',
+       'Manager', 'Manufacturing Director', 'Research Director',
+       'Research Scientist', 'Sales Executive', 'Sales Representative',
+       'Female', 'Male'],dtype='object')
 
+   
 
 
 with tab4:
