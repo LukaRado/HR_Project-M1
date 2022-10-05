@@ -147,7 +147,7 @@ with tab2:
        x='JobLevel',
        y='JobRole',
        color='JobSatisfaction'
-      ).properties(width = 500, height = 300))
+      ).properties(width = 500, height = 375))
 
 
 
