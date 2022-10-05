@@ -107,9 +107,9 @@ with tab2:
 
    st.write(alt.Chart(data).mark_rect().encode(
 
-       alt.X('YearsWithCurrManager', bin=alt.Bin(maxbins=60)),
+       alt.X('YearsWithCurrManager:Q', bin=alt.Bin(maxbins=60)),
 
-       alt.Y('YearsWithCurrManager.sum', bin=alt.Bin(maxbins=40)),
+       alt.Y('sum(YearsWithCurrManager):Q', bin=alt.Bin(maxbins=40)),
 
        alt.Color('PerformanceRating', scale=alt.Scale(scheme='greenblue'))))
 
