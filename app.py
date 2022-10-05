@@ -96,7 +96,7 @@ with tab2:
    ret_per.metric(label = "Overall Performance (Scale 1-4)", value = limited_float_per)
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
-   ##setting up plots
+   ##setting up visualization for 
    col1, col2 = st.columns(2)
    with col1:
       st.write(alt.Chart(data).mark_bar().encode(
@@ -112,7 +112,7 @@ with tab2:
        color='JobSatisfaction').properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Level and Department'))
 
 
-   #Boxplot
+   #calling the Boxplot
    colT1,colT2 = st.columns([1,10])
    with colT2:
       st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
