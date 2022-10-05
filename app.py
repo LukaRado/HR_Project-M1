@@ -1,6 +1,7 @@
 #Import libraries
 
 
+from turtle import title
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -98,16 +99,10 @@ with tab2:
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
    ##setting up plots
-
-   #Boxplot
-   st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
-   x='Age:Q',
-   y='JobRole:O'
-   ))
-
    col1, col2 = st.columns(2)
    with col1:
       st.write(alt.Chart(data).mark_bar().encode(
+      title = 'Attrition Compared to Age',
       x='Age',
       y='sum(Age)',
       color='Attrition', tooltip=['Age','sum(Age)','Attrition']).properties(width=600).interactive())
@@ -120,7 +115,11 @@ with tab2:
       ).properties(width = 500, height = 360))
 
 
-
+   #Boxplot
+   st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
+   x='Age:Q',
+   y='JobRole:O'
+   ))
 
 with tab3:
    st.header("SML")
