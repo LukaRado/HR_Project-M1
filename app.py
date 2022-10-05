@@ -115,10 +115,7 @@ with tab2:
        alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
 
    
-   alt.Chart(data).mark_bar().encode(
-       alt.X("IMDB_Rating:Q", bin=True),
-       y='count()',
-   )
+   
 
 
    selection = alt.selection_multi(fields=['series'], bind='legend')
