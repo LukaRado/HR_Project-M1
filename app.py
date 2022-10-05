@@ -159,7 +159,7 @@ with tab3:
 
    YearsAtCompany = st.number_input('How many years at this company? (1-10 years)', min_value=1, max_value=10)
 
-   JobSatisfaction = st.number_input('Rate your Job satisfaction? (1-4)', min_value=1, max_value=4)
+   JobSatisfaction = st.number_input('Rate your Job satisfactionasdasd? (1-4)', min_value=1, max_value=4)
 
    NumCompaniesWorked = st.number_input('How many companies you worked at? (1-9)', min_value=0, max_value=9)
 
