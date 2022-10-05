@@ -78,7 +78,7 @@ with st.sidebar.expander("Learn More about the Supervised Machine Learning "):
 
     st.write("hey")
 
-tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
+tab1, tab2, tab3, tab4 = st.tabs(["Overview", "HR Managererial Tool", "SML", "UML"])
 
 with tab1:
    st.header("Overview")
@@ -124,3 +124,7 @@ with tab2:
 
 with tab3:
    st.header("SML")
+
+
+with tab4:
+   st.Header('UML')
