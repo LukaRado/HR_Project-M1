@@ -1,4 +1,4 @@
-[theme]:app.py 
+[theme] = app.py 
 primaryColor = "#575fe8" 
 backgroundColor = "#f5f7f3" 
 secondaryBackgroundColor = "#c9eab8" 
