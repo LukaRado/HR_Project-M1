@@ -102,10 +102,11 @@ with tab2:
    col1, col2 = st.columns(2)
    with col1:
       st.write(alt.Chart(data).mark_bar().encode(
-      title = 'Attrition Compared to Age',
       x='Age',
       y='sum(Age)',
-      color='Attrition', tooltip=['Age','sum(Age)','Attrition']).properties(width=600).interactive())
+      color='Attrition', 
+      tooltip=['Age','sum(Age)','Attrition'],
+      title='Attrition Compared to Age').properties(width=600).interactive())
 
    with col2:
       st.write(alt.Chart(data).mark_rect().encode(
