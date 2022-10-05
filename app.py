@@ -120,11 +120,11 @@ with tab2:
 
    st.write(alt.Chart(data).mark_area().encode(
 
-       alt.X('YearsWithCurrManager', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
+       alt.X('YearsWithCurrManager:O', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
 
-       alt.Y('PerformanceRating', stack='center', axis=None),
+       alt.Y('PerformanceRating:Q', stack='center', axis=None),
 
-       alt.Color('Department', scale=alt.Scale(scheme='category20b')),
+       alt.Color('Department:N', scale=alt.Scale(scheme='category20b')),
 
        opacity=alt.condition(selection, alt.value(1), alt.value(0.2))
 
