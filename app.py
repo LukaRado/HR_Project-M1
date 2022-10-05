@@ -139,6 +139,7 @@ with tab2:
    ))
 
 
+   st.write(alt.Chart(data).mark_bar().encode(x='Age',y='sum(Age)',color='Attrition').properties(width=700).interactive())
 
 
 
