@@ -156,11 +156,11 @@ with tab4:
 
                height=7,
 
-               data=df_hr,
+               data="df_hr",
 
                 scatter_kws={'alpha':0.5},
 
-               palette=palette)
+               palette='palette')
 
    g.set_xlabels('YearsAtCompany')
 
