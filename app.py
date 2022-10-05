@@ -102,7 +102,7 @@ with tab2:
       st.write(alt.Chart(data).mark_rect().encode(
        x='JobLevel',
        y='JobRole',
-       color='JobSatisfaction').properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Role and Job Level'))
+       color='JobSatisfaction').properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Roles and Job Level'))
 
 
    #calling the Boxplot
