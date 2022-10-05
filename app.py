@@ -157,7 +157,7 @@ with tab3:
 
    Gender = st.radio('What is your gender?', options=ohe.categories_[1])
 
-   YearsAtCompany = st.number_input('How many years at this company? (1-10 years)', min_value=1, max_value=10)
+   YearsAtCompany = st.number_input('How many years at this company?', min_value=1, max_value=10)
 
    JobSatisfaction = st.number_input('Rate your Job satisfaction?', min_value=1, max_value=4)
 
