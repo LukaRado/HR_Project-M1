@@ -156,6 +156,8 @@ with tab4:
 
                height=7,
 
+               data = data,
+               
                scatter_kws={'alpha':0.5},
 
                palette='palette')
