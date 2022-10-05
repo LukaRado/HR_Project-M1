@@ -105,13 +105,13 @@ with tab2:
    ))
 
 
-st.write(alt.Chart(data).mark_rect().encode(
+   st.write(alt.Chart(data).mark_rect().encode(
 
-    alt.X('YearsWithCurrManager', bin=alt.Bin(maxbins=60)),
+       alt.X('YearsWithCurrManager', bin=alt.Bin(maxbins=60)),
 
-    alt.Y('sum(YearsWithCurrManager)', bin=alt.Bin(maxbins=40)),
+       alt.Y('sum()', bin=alt.Bin(maxbins=40)),
 
-    alt.Color('PerformanceRating', scale=alt.Scale(scheme='greenblue'))))
+       alt.Color('PerformanceRating', scale=alt.Scale(scheme='greenblue'))))
 
 
 
