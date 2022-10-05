@@ -6,7 +6,7 @@ import numpy as np
 import altair as alt
 from xgboost import XGBRegressor
 import pickle
-
+import itertools
 
 #Importing data
 data1 = pd.read_csv('employee_survey_data.csv')
