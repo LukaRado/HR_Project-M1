@@ -170,7 +170,38 @@ with tab3:
        'Research Scientist', 'Sales Executive', 'Sales Representative',
        'Female', 'Male'],dtype='object')
 
-   
+    new_values_cat['Healthcare Representative'] = 0
+    new_values_cat['Human Resources'] = 0
+    new_values_cat['Laboratory Technician'] = 0
+    new_values_cat['Manager'] = 0
+    new_values_cat['Manufacturing Director'] = 0
+    new_values_cat['Research Director'] = 0
+    new_values_cat['Research Scientist'] = 0
+    new_values_cat['Sales Executive'] = 0
+    new_values_cat['Sales Representative'] = 0
+    new_values_cat['Female'] = 0
+    new_values_cat['Male'] = 0
+    
+    new_values_cat[JobRole] = 1
+    new_values_cat[Gender] = 1
+
+    # make a DF for the numericals and standard scale
+    new_df_num = pd.DataFrame({'YearsAtCompany': YearsAtCompany,
+                        'JobSatisfaction':JobSatisfaction,
+                        'NumCompaniesWorked':NumCompaniesWorked
+                        }, index=[0])
+    new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
+    
+    #bring all columns together
+    line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
+    
+    #run prediction for 1 new observation
+    predicted_value = model_xgb.predict(line_to_pred)[0]
+
+
+
+   #print out result to user
+    st.metric(label="Probability of employee leave the company", value=f'{"{:.0%}".format(predicted_value)} ')
 
 
 with tab4:
