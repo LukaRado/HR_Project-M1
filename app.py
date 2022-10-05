@@ -109,9 +109,7 @@ with tab2:
       st.write(alt.Chart(data).mark_rect().encode(
        x='JobLevel',
        y='JobRole',
-       color='JobSatisfaction',
-       tooltip=['JobLevel','JobRole','count()']
-      ).properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Level and Department'))
+       color='JobSatisfaction').properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Level and Department'))
 
 
    #Boxplot
