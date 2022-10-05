@@ -106,7 +106,7 @@ with tab2:
       y='sum(Age)',
       color='Attrition', 
       tooltip=['Age','sum(Age)','Attrition'],
-      title='Attrition Compared to Age').properties(width=600).interactive())
+      title=('Attrition Compared to Age')).properties(width=600).interactive())
 
    with col2:
       st.write(alt.Chart(data).mark_rect().encode(
