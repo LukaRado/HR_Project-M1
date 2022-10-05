@@ -118,7 +118,7 @@ with tab2:
 
 
 
-   alt.Chart(data).mark_area().encode(
+   st.write(alt.Chart(data).mark_area().encode(
 
        alt.X('YearsWithCurrManager', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
 
@@ -131,7 +131,7 @@ with tab2:
    ).add_selection(
 
        selection
-   )
+   ))
 
 
 
