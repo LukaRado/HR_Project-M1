@@ -128,4 +128,4 @@ with tab4:
 
    with st.expander("Feature Engineering"):
 
-    st.image(image = "24c74b68ceef04f6e738f12d77aa7b6d607013e7.jpg" )
+ 
