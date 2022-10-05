@@ -90,7 +90,7 @@ with tab1:
 
 
 with tab2:
-   st.header("HR Managerial Informational Sheet")   
+   st.header("HR Managerial Informational Tool")   
 
    ret_met, ret_per, ret_age = st.columns(3)
    ret_met.metric(label = "Retention rate (%)", value = limited_float_ret)
@@ -114,9 +114,14 @@ with tab2:
 
        alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
 
+   
+   alt.Chart(data).mark_bar().encode(
+       alt.X("IMDB_Rating:Q", bin=True),
+       y='count()',
+   )
+
+
    selection = alt.selection_multi(fields=['series'], bind='legend')
-
-
 
    st.write(alt.Chart(data).mark_area().encode(
 
