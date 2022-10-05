@@ -112,7 +112,57 @@ with tab2:
       y='JobRole:O',).properties(title = 'Age Spread Across Job Roles', width= 700))
 
 with tab3:
-   st.header("SML")
+   st.header("Predict Attrition")
+
+   # use this decorator (--> @st.experimental_singleton) and 0-parameters function to only load and preprocess once in order to limit the processesing power of our application
+
+   # Loading files through Pickle - Cat takes a series of iterables and returns a single one
+
+   @st.experimental_singleton
+
+   def read_objects():
+
+       model_xgb = pickle.load(open('model_xgb.pkl','rb'))
+
+       scaler = pickle.load(open('scaler.pkl','rb'))
+
+       ohe = pickle.load(open('ohe.pkl','rb'))
+
+       shap_values = pickle.load(open('shap_values.pkl','rb'))
+
+       cats = list(itertools.chain(*ohe.categories_))
+
+       return model_xgb, scaler, ohe, cats, shap_values
+
+
+
+   model_xgb, scaler, ohe, cats, shap_values = read_objects()
+
+   # Formatting for the application
+
+   with st.expander("What's that app?"):
+
+       st.markdown("""
+
+       This app will help you predict attrition of the employee
+
+       """)
+
+
+
+   #Creating layout
+
+   JobRole = st.selectbox('Select your Job Role', options=ohe.categories_[0])
+
+   Gender = st.radio('What is your gender?', options=ohe.categories_[1])
+
+   YearsAtCompany = st.number_input('How many years at this company?', min_value=1, max_value=10)
+
+   JobSatisfaction = st.number_input('Rate your Job satisfaction?', min_value=1, max_value=4)
+
+   NumCompaniesWorked = st.number_input('How many companies you worked at?', min_value=0, max_value=9)
+
+
 
 
 with tab4:
