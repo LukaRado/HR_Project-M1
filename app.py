@@ -115,7 +115,7 @@ with tab2:
    colT1,colT2 = st.columns([1,10])
    with colT2:
       st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
-      x='Age:Q',
+      x='Age:Q', scale=alt.Scale(zero=False),
       y='JobRole:O').properties(title = 'Age Spread Across Job Roles', width= 700))
 
 with tab3:
