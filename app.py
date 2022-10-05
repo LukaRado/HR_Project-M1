@@ -5,8 +5,6 @@ import pandas as pd
 import numpy as np
 import altair as alt
 from xgboost import XGBRegressor
-import seaborn as sns
-
 
 
 #Importing data
@@ -147,21 +145,3 @@ with tab4:
       st.image(image = "KMeans.png")
 
       st.image(image = "KMeans 2.png")
-   
-      g = sns.lmplot(x="YearsAtCompany",
-
-               y="MonthlyIncome_log",
-
-               hue="Attrition",
-
-               height=7,
-
-               data = data,
-
-               scatter_kws={'alpha':0.5},
-
-               palette='palette')
-
-      g.set_xlabels('YearsAtCompany')
-
-      g.set_ylabels('MonthlyIncome')
