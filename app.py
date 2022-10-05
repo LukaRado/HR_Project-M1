@@ -110,7 +110,7 @@ with tab2:
        x='JobLevel',
        y='JobRole',
        color='JobSatisfaction',
-       tooltip=['JobLevel','JobRole']
+       tooltip=['JobLevel','JobRole','count()']
       ).properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Level and Department'))
 
 
