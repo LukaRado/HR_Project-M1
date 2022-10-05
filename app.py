@@ -103,14 +103,15 @@ with tab2:
       x='Age',
       y='sum(Age)',
       color='Attrition', 
-      tooltip=['Age','sum(Age)','Attrition'],).properties(width=600, title='Attrition Compared to Age').interactive())
+      tooltip=['Age','sum(Age)','Attrition'],).properties(width=600, title = 'Attrition Compared to Age').interactive())
 
    with col2:
       st.write(alt.Chart(data).mark_rect().encode(
        x='JobLevel',
        y='JobRole',
-       color='JobSatisfaction'
-      ).properties(width = 500, height = 360))
+       color='JobSatisfaction',
+       tooltip=['JobLevel','JobRole','mean(JobSatisfaction)']
+      ).properties(width = 500, height = 360, title = 'Job Satisfaction Across Job Level and Department'))
 
 
    #Boxplot
