@@ -105,36 +105,6 @@ with tab2:
    y='JobRole:O'
    ))
 
-
-   st.write(alt.Chart(data).mark_rect().encode(
-
-       alt.X('YearsWithCurrManager:O', bin=alt.Bin(maxbins=60)),
-
-       alt.Y('sum(PerformanceRating):Q', bin=alt.Bin(maxbins=40)),
-
-       alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
-
-   
-   
-
-
-   selection = alt.selection_multi(fields=['series'], bind='legend')
-
-   st.write(alt.Chart(data).mark_area().encode(
-
-       alt.X('YearsWithCurrManager:O', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
-
-       alt.Y('PerformanceRating:Q', stack='center', axis=None),
-
-       alt.Color('Department:N', scale=alt.Scale(scheme='category20b')),
-
-       opacity=alt.condition(selection, alt.value(1), alt.value(0.2))
-
-   ).add_selection(
-
-       selection
-   ))
-
    col1, col2 = st.columns(2)
    with col1:
       st.write(alt.Chart(data).mark_bar().encode(
