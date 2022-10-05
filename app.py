@@ -114,9 +114,9 @@ with tab2:
    #calling the Boxplot
    colT1,colT2 = st.columns([1,10])
    with colT2:
-      st.write(alt.Chart(data).mark_boxplot().encode(
+      st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
       x='Age:Q',
-      y='JobRole:O', scale=alt.Scale(zero=False)).properties(title = 'Age Spread Across Job Roles', width= 700))
+      y='JobRole:O',).properties(title = 'Age Spread Across Job Roles', width= 700))
 
 with tab3:
    st.header("SML")
