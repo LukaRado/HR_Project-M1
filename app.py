@@ -146,3 +146,4 @@ with st.expander("K-Means"):
    st.image(image = "KMeans.png")
 
    st.image(image = "KMeans 2.png")
+   
