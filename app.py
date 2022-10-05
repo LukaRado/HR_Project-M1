@@ -60,6 +60,21 @@ colT1,colT2 = st.columns([10,20])
 with colT2:
    st.title('HR Managing Tool Project')
 
+with st.sidebar.expander("Learn more about the Visualization"):
+
+    st.write("hey")
+
+
+
+with st.sidebar.expander("Learn More about the Unsupervised Machine Learning "):
+
+    st.write("hey")
+
+
+
+with st.sidebar.expander("Learn More about the Supervised Machine Learning "):
+
+    st.write("hey")
 
 tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
