@@ -139,7 +139,7 @@ with tab2:
    mark_bar = st.write(alt.Chart(data).mark_bar().encode(
       x='Age',
       y='sum(Age)',
-      color='Attrition').properties(width=700).interactive())
+      color='Attrition').properties(width=500).interactive())
    
    mark_rect = st.write(alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatisfaction
     x='JobLevel',
