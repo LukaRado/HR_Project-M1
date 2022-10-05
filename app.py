@@ -135,7 +135,7 @@ with tab2:
        selection
    ))
 
-   mark_bar, mark_rect = st.column(2)
+   mark_bar, mark_rect = st.columns(2)
    mark_bar = st.write(alt.Chart(data).mark_bar().encode(
       x='Age',
       y='sum(Age)',
