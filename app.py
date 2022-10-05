@@ -110,7 +110,7 @@ with tab2:
       st.write(alt.Chart(data).mark_bar().encode(
       x='Age',
       y='sum(Age)',
-      color='Attrition').properties(width=600).interactive().tooltip())
+      color='Attrition').properties(width=600).interactive().tooltip=['x','y','color'])
 
    with col2:
       st.write(alt.Chart(data).mark_rect().encode(
@@ -127,4 +127,4 @@ with tab3:
 
 
 with tab4:
-   st.header('UML')
+   st.header("UML")
