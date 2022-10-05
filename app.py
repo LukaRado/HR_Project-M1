@@ -122,7 +122,7 @@ with tab2:
 
        alt.X('YearsWithCurrManager:O', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
 
-       alt.Y('sum(PerformanceRating):Q:', stack='center', axis=None),
+       alt.Y('sum(PerformanceRating):Q', stack='center', axis=None),
 
        alt.Color('Department:N', scale=alt.Scale(scheme='category20b')),
 
