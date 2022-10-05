@@ -4,3 +4,5 @@ backgroundColor = "#f5f7f3"
 secondaryBackgroundColor = "#c9eab8" 
 textColor = "#262730" 
 font = "sans serif"
+
+streamlit run your_script.py --server.port 80

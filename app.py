@@ -1,3 +1,7 @@
+#server
+port = 80
+
+
 #Import libraries
 
 import streamlit as st
