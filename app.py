@@ -143,7 +143,7 @@ with tab2:
       color='Attrition').properties(width=500).interactive())
 
    with col2:
-      st.write(alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatisfaction
+      st.write(alt.Chart(data).mark_rect().encode(
        x='JobLevel',
        y='JobRole',
        color='JobSatisfaction'
