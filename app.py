@@ -140,7 +140,6 @@ with tab2:
       x='Age',
       y='sum(Age)',
       color='Attrition').properties(width=500).interactive())
-   
    mark_rect = st.write(alt.Chart(data).mark_rect().encode( #we would like to add more steps in JobSatisfaction
     x='JobLevel',
     y='JobRole',
