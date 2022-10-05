@@ -148,7 +148,7 @@ with tab4:
 
       st.image(image = "KMeans 2.png")
    
-   g = sns.lmplot(x="YearsAtCompany",
+      g = sns.lmplot(x="YearsAtCompany",
 
                y="MonthlyIncome_log",
 
@@ -162,6 +162,6 @@ with tab4:
 
                palette='palette')
 
-   g.set_xlabels('YearsAtCompany')
+      g.set_xlabels('YearsAtCompany')
 
-   g.set_ylabels('MonthlyIncome')
+      g.set_ylabels('MonthlyIncome')
