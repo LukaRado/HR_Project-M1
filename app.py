@@ -97,7 +97,7 @@ with tab2:
    ret_per.metric(label = "Overall Performance (Scale 1-4)", value = limited_float_per)
    ret_age.metric(label = "Mean Workforce Age", value = limited_float_age)
 
-   #first plot
+   #setting up plots
 
    st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
    x='Age:Q',
@@ -107,11 +107,11 @@ with tab2:
 
    st.write(alt.Chart(data).mark_rect().encode(
 
-       alt.X('YearsWithCurrManager:Q', bin=alt.Bin(maxbins=60)),
+       alt.X('YearsWithCurrManager:O', bin=alt.Bin(maxbins=60)),
 
-       alt.Y('sum(YearsWithCurrManager):Q', bin=alt.Bin(maxbins=40)),
+       alt.Y('sum(YearsWithCurrManager):O', bin=alt.Bin(maxbins=40)),
 
-       alt.Color('PerformanceRating', scale=alt.Scale(scheme='greenblue'))))
+       alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
 
 
 
