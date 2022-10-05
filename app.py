@@ -114,7 +114,7 @@ with tab2:
    #calling the Boxplot
    colT1,colT2 = st.columns([1,10])
    with colT2:
-      st.write(alt.Chart(data).mark_boxplot(size=50).encode(
+      st.write(alt.Chart(data).mark_boxplot().encode(
       x='Age:Q',
       y='JobRole:O', scale=alt.Scale(zero=False)).properties(title = 'Age Spread Across Job Roles', width= 700))
 
