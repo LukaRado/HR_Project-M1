@@ -110,7 +110,7 @@ with tab2:
 
        alt.X('YearsWithCurrManager:O', bin=alt.Bin(maxbins=60)),
 
-       alt.Y('YearsWithCurrManager:O', bin=alt.Bin(maxbins=40)),
+       alt.Y('PerformanceRating:Q', bin=alt.Bin(maxbins=40)),
 
        alt.Color('PerformanceRating:Q', scale=alt.Scale(scheme='greenblue'))))
 
@@ -122,7 +122,7 @@ with tab2:
 
        alt.X('YearsWithCurrManager:O', axis=alt.Axis(domain=False, format='%Y', tickSize=0)),
 
-       alt.Y('sum(PerformanceRating):Q', stack='center', axis=None),
+       alt.Y('PerformanceRating:Q', stack='center', axis=None),
 
        alt.Color('Department:N', scale=alt.Scale(scheme='category20b')),
 
