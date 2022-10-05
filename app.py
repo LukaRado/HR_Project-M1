@@ -113,7 +113,7 @@ with tab2:
 
 
    #Boxplot
-   st.write(alt.Chart(data).mark_boxplot(extent='10 -max').encode(
+   st.write(alt.Chart(data).mark_boxplot(extent='min-max').encode(
    x='Age:Q',
    y='JobRole:O').properties(title = 'Age Spread Across Job Roles', width= 500))
 
